@@ -1,0 +1,116 @@
+/* ===============================
+   Global App Background
+   =============================== */
+.stApp {
+    background: linear-gradient(-45deg, #2c3e50, #6c5ce7, #00cec9, #ff7675),
+                url("https://picsum.photos/1920/1080?blur=10");
+    background-size: 400% 400%, cover;
+    background-blend-mode: overlay;
+    animation: gradientShift 20s ease infinite;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Animated Gradient */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%, center; }
+    50% { background-position: 100% 50%, center; }
+    100% { background-position: 0% 50%, center; }
+}
+
+/* ===============================
+   Glassmorphic Content Containers
+   =============================== */
+.block-container {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+    animation: fadeInUp 1.5s ease;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===============================
+   Navigation Bar
+   =============================== */
+nav[role="navigation"] {
+    background: rgba(44, 62, 80, 0.75) !important;
+    border-radius: 15px;
+    padding: 0.6rem 1rem;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.6);
+    animation: fadeInDown 1.5s ease;
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-40px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===============================
+   Buttons
+   =============================== */
+.stButton button {
+    background: linear-gradient(45deg, #6c5ce7, #00cec9, #ff7675);
+    color: white;
+    font-weight: bold;
+    border-radius: 14px;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    animation: pulseButton 3s infinite;
+}
+
+.stButton button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(108, 92, 231, 0.9),
+                0 0 35px rgba(0, 206, 201, 0.8),
+                0 0 45px rgba(255, 118, 117, 0.9);
+}
+
+@keyframes pulseButton {
+    0%, 100% { box-shadow: 0 0 15px rgba(255,118,117,0.5); }
+    50% { box-shadow: 0 0 30px rgba(0,206,201,0.8); }
+}
+
+/* ===============================
+   Inputs
+   =============================== */
+.stTextInput > div > div > input,
+.stTextArea > div > textarea {
+    background: rgba(255,255,255,0.12);
+    color: white;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 0.6rem;
+    transition: all 0.3s ease;
+}
+
+.stTextInput > div > div > input:focus,
+.stTextArea > div > textarea:focus {
+    border-color: #00cec9;
+    box-shadow: 0 0 18px rgba(0,206,201,0.9);
+}
+
+/* ===============================
+   Titles
+   =============================== */
+h1, h2, h3 {
+    text-align: center;
+    font-weight: bold;
+    color: #ffeaa7;
+    animation: glowText 4s ease-in-out infinite alternate;
+}
+
+@keyframes glowText {
+    from { text-shadow: 0 0 15px rgba(255,234,167,0.9); }
+    to   { text-shadow: 0 0 25px rgba(108,92,231,1),
+                     0 0 35px rgba(0,206,201,0.9),
+                     0 0 45px rgba(255,118,117,1); }
+}

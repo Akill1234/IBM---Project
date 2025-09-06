@@ -1,0 +1,22 @@
+edu_ai_project/
+│
+├── app.py                       # Main entry point (loads navbar + routes panels)
+├── requirements.txt             # Python dependencies
+├── model/
+    └── edu_ai.db                    # backend code
+│
+├── auth/
+│   └── login.py                 # Login form logic (student/educator)
+│
+├── pages/
+│   ├── educator__dashboard.py
+│   ├── quiz_history.py
+│   ├── student_dashboard.py
+│   ├── take_quiz.py
+│
+├── static/                       # Streamlit multipage support (optional)
+│   ├── style.css                # Quiz panel
+│                                # Quiz history panel
+│
+└── database/                       # (optional) Helper functions
+    └──db.py                           # SQLite database
